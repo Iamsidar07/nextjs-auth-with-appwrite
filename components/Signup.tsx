@@ -1,6 +1,7 @@
 'use client';
 import appwriteService from "@/appwrite/config"
 import useAuth from "@/context/useAuth"
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 
@@ -41,8 +42,18 @@ const Signup = () => {
     }
     return (
         <div className="flex min-h-screen flex-col items-center justify-center p-24"> 
-            <form className="min-w-[320px] h-fit p-2 md:p-6 border rounded-lg" onSubmit={createUser}>
             <h1 className="text-center font-bold">Sign up</h1>
+            <p className="mt-2 text-center text-base text-gray-600">
+                Allready have an account?&nbsp;
+                <Link
+                    href="/login"
+                    className="font-medium text-primary transition-all duration-200 hover:underline"
+                >
+                    Login
+                </Link>
+            </p>
+            {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
+            <form className="min-w-[320px] h-fit p-2 md:p-6 border rounded-lg" onSubmit={createUser}>
             <div className="flex flex-col">
                 <label htmlFor="username" className="textsm text-slate-600">
                     username

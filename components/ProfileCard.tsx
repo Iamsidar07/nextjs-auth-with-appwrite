@@ -23,7 +23,7 @@ const ProfileCard = () => {
             <>
                 <div className="flex gap-y-6 flex-wrap">
                     <div className="flex w-full gap-x-4 items-center">
-                        <div className="shrink-0 w-20">
+                        <div className="shrink-0 w-20 rounded-full">
                             <Avatar image="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
                         </div>
                         <div className="relative">

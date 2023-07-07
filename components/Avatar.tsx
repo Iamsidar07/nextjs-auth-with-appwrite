@@ -8,7 +8,7 @@ const Avatar: FC<AvatarProps> = ({ image, alt }) => {
   return (
       <div className="rounded-full overflow-hidden w-full pt-[100%] relative">
           <div className="absolute inset-0">
-              <Image src={image} alt={alt || image} width={50} height={50}/>
+              <Image src={image} alt={alt || image} fill className="object-cover"/>
           </div>
       </div>
   )
